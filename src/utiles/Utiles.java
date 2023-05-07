@@ -6,6 +6,15 @@ import java.util.HashMap;
 import modelo.Reloj;
 
 public class Utiles {
+    public static long binomialCoefficient(int n, int k) {
+        long result = 1;
+        for (int i = 0; i < k; i++) {
+            result *= (n-i);
+            result /= (i+1);
+        }
+        return result;
+    }
+    
     /**
      * Devuelve un arraylist de tantos relojes como especifiques
      * @param cantidad
